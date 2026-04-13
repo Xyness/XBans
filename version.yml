@@ -1,11 +1,11 @@
 # Version
-version: 1.0.4
+version: 1.0.5
 
 # Update date
 date: 13/04/2026
 
 # Update notes
 update-notes:
-- Add jail system (multi-jail, configurable restrictions, GUI, cross-server sync)
-- Add -server flag support for jail (server-specific jails)
-- Add config and lang auto-update on startup
+- Add jail history in player profile GUI
+- Add jail status indicator in player profile head lore
+- Add usage messages for /freeze, /watchlist, /note, /jail-create, /jail-delete when run without arguments
