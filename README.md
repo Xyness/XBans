@@ -80,17 +80,17 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | Command | Permission |
 |---------|-----------|
 | `/ban [-s] [-server <name>] <player> [time] [reason]` | `xbans.ban` |
-| `/unban [-s] <player>` | `xbans.unban` |
-| `/ban-ip [-s] <player> [time] [reason]` | `xbans.banip` |
-| `/unban-ip [-s] <player>` | `xbans.unbanip` |
-| `/ban-ip-range [-s] <range> [reason]` | `xbans.banip` |
-| `/mute [-s] <player> [time] [reason]` | `xbans.mute` |
-| `/unmute [-s] <player>` | `xbans.unmute` |
-| `/mute-ip [-s] <player> [time] [reason]` | `xbans.muteip` |
-| `/unmute-ip [-s] <player>` | `xbans.unmuteip` |
-| `/warn [-s] <player> [reason]` | `xbans.warn` |
+| `/unban [-s] [-server <name>] <player>` | `xbans.unban` |
+| `/ban-ip [-s] [-server <name>] <player> [time] [reason]` | `xbans.banip` |
+| `/unban-ip [-s] [-server <name>] <player>` | `xbans.unbanip` |
+| `/ban-ip-range [-s] [-server <name>] <range> [reason]` | `xbans.banip` |
+| `/mute [-s] [-server <name>] <player> [time] [reason]` | `xbans.mute` |
+| `/unmute [-s] [-server <name>] <player>` | `xbans.unmute` |
+| `/mute-ip [-s] [-server <name>] <player> [time] [reason]` | `xbans.muteip` |
+| `/unmute-ip [-s] [-server <name>] <player>` | `xbans.unmuteip` |
+| `/warn [-s] [-server <name>] <player> [reason]` | `xbans.warn` |
 | `/unwarn [-s] <player> [id]` | `xbans.unwarn` |
-| `/kick [-s] <player> [reason]` | `xbans.kick` |
+| `/kick [-s] [-server <name>] <player> [reason]` | `xbans.kick` |
 | `/jail [-s] [-server <name>] <player> [jail] [time] [reason]` | `xbans.jail` |
 | `/unjail [-s] <player>` | `xbans.unjail` |
 | `/report <player> <reason>` | `xbans.report` |
