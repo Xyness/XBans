@@ -9,7 +9,7 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 - **Mute** / **IP Mute** -- blocks chat and configurable commands (`/msg`, `/r`, `/tell`, `/w`, `/me`)
 - **Warn** -- with configurable expiration and auto-escalation at thresholds
 - **Kick** -- immediate expulsion with reason display
-- **Jail** -- teleport to a predefined jail location with configurable restrictions (movement radius, chat, commands, interact, PvP)
+- **Jail** -- teleport to a predefined jail location with configurable restrictions (movement radius, chat, commands, interact, PvP), supports `-server` for server-specific jails
 - **Report** -- with AI classification, chat evidence extraction, and GUI resolution workflow
 - **Templates** -- shortcuts for common sanctions (e.g. `/ban player @cheat`)
 - **Shadow ban** -- banned player can join but only sees their own messages
@@ -20,6 +20,7 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 - **Auto-expiration** -- configurable default duration, auto-release when time is up
 - **Previous location restore** -- player teleported back to their original position on unjail
 - **Join enforcement** -- jailed players are teleported to jail on login
+- **Server targeting** -- `-server <name>` flag to limit jail to a specific server (same as ban/mute)
 - **Cross-server sync** -- jail status propagates across all servers
 - **GUI** -- `/jaillist` shows all jailed players with unjail/profile buttons
 
@@ -90,7 +91,7 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `/warn [-s] <player> [reason]` | `xbans.warn` |
 | `/unwarn [-s] <player> [id]` | `xbans.unwarn` |
 | `/kick [-s] <player> [reason]` | `xbans.kick` |
-| `/jail [-s] <player> [jail] [time] [reason]` | `xbans.jail` |
+| `/jail [-s] [-server <name>] <player> [jail] [time] [reason]` | `xbans.jail` |
 | `/unjail [-s] <player>` | `xbans.unjail` |
 | `/report <player> <reason>` | `xbans.report` |
 | `/unreport <player> [id]` | `xbans.unreport` |
