@@ -1,11 +1,9 @@
 # Version
-version: 1.0.5
+version: 1.0.6
 
 # Update date
 date: 13/04/2026
 
 # Update notes
 update-notes:
-- Add jail history in player profile GUI
-- Add jail status indicator in player profile head lore
-- Add usage messages for /freeze, /watchlist, /note, /jail-create, /jail-delete when run without arguments
+- Fix minor issue
