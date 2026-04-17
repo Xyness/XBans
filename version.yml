@@ -1,12 +1,10 @@
 # Version
-version: 1.0.8
+version: 1.0.9
 
 # Update date
-date: 16/04/2026
+date: 17/04/2026
 
 # Update notes
 update-notes:
-- Fixed jail history {jail} placeholder
-- Consolidated IP security config
-- Merged list commands into /sanctions
-- Fixed DOUBLE type for PostgreSQL
+- Fixed cross-server sanction announces
+- Fixed server name in GUIs

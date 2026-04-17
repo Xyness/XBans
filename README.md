@@ -79,19 +79,19 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 
 | Command | Permission |
 |---------|-----------|
-| `/ban [-s] [-server <name>] <player> [time] [reason]` | `xbans.ban` |
-| `/unban [-s] [-server <name>] <player>` | `xbans.unban` |
-| `/ban-ip [-s] [-server <name>] <player> [time] [reason]` | `xbans.banip` |
-| `/unban-ip [-s] [-server <name>] <player>` | `xbans.unbanip` |
-| `/ban-ip-range [-s] [-server <name>] <range> [reason]` | `xbans.banip` |
-| `/mute [-s] [-server <name>] <player> [time] [reason]` | `xbans.mute` |
-| `/unmute [-s] [-server <name>] <player>` | `xbans.unmute` |
-| `/mute-ip [-s] [-server <name>] <player> [time] [reason]` | `xbans.muteip` |
-| `/unmute-ip [-s] [-server <name>] <player>` | `xbans.unmuteip` |
-| `/warn [-s] [-server <name>] <player> [reason]` | `xbans.warn` |
+| `/ban [-s] <player> [time] [reason] [-server <name>]` | `xbans.ban` |
+| `/unban [-s] <player> [-server <name>]` | `xbans.unban` |
+| `/ban-ip [-s] <player> [time] [reason] [-server <name>]` | `xbans.banip` |
+| `/unban-ip [-s] <player> [-server <name>]` | `xbans.unbanip` |
+| `/ban-ip-range [-s] <range> [reason] [-server <name>]` | `xbans.banip` |
+| `/mute [-s] <player> [time] [reason] [-server <name>]` | `xbans.mute` |
+| `/unmute [-s] <player> [-server <name>]` | `xbans.unmute` |
+| `/mute-ip [-s] <player> [time] [reason] [-server <name>]` | `xbans.muteip` |
+| `/unmute-ip [-s] <player> [-server <name>]` | `xbans.unmuteip` |
+| `/warn [-s] <player> [reason] [-server <name>]` | `xbans.warn` |
 | `/unwarn [-s] <player> [id]` | `xbans.unwarn` |
-| `/kick [-s] [-server <name>] <player> [reason]` | `xbans.kick` |
-| `/jail [-s] [-server <name>] <player> [jail] [time] [reason]` | `xbans.jail` |
+| `/kick [-s] <player> [reason] [-server <name>]` | `xbans.kick` |
+| `/jail [-s] <player> [jail] [time] [reason] [-server <name>]` | `xbans.jail` |
 | `/unjail [-s] <player>` | `xbans.unjail` |
 | `/report <player> <reason>` | `xbans.report` |
 | `/unreport <player> [id]` | `xbans.unreport` |
