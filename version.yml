@@ -1,10 +1,9 @@
 # Version
-version: 1.0.9
+version: 1.0.10
 
 # Update date
-date: 17/04/2026
+date: 19/04/2026
 
 # Update notes
 update-notes:
-- Fixed cross-server sanction announces
-- Fixed server name in GUIs
+- Fixed MySQL index issues
