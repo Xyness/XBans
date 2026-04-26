@@ -7,7 +7,7 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 ### Sanctions
 - **Ban** / **IP Ban** / **IP Range Ban** -- with optional duration, silent flag, server targeting, templates
 - **Mute** / **IP Mute** -- blocks chat and configurable commands (`/msg`, `/r`, `/tell`, `/w`, `/me`)
-- **Warn** -- with configurable expiration and auto-escalation at thresholds
+- **Warn** -- with configurable expiration and auto-escalation at thresholds (mute / ban / jail)
 - **Kick** -- immediate expulsion with reason display
 - **Jail** -- teleport to a predefined jail location with configurable restrictions (movement radius, chat, commands, interact, PvP), supports `-server` for server-specific jails
 - **Report** -- with AI classification, chat evidence extraction, and GUI resolution workflow
@@ -83,7 +83,7 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `/unban [-s] <player> [-server <name>]` | `xbans.unban` |
 | `/ban-ip [-s] <player> [time] [reason] [-server <name>]` | `xbans.banip` |
 | `/unban-ip [-s] <player> [-server <name>]` | `xbans.unbanip` |
-| `/ban-ip-range [-s] <range> [reason] [-server <name>]` | `xbans.banip` |
+| `/ban-ip-range [-s] <range> [reason] [-server <name>]` | `xbans.baniprange` |
 | `/mute [-s] <player> [time] [reason] [-server <name>]` | `xbans.mute` |
 | `/unmute [-s] <player> [-server <name>]` | `xbans.unmute` |
 | `/mute-ip [-s] <player> [time] [reason] [-server <name>]` | `xbans.muteip` |
@@ -95,8 +95,8 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `/unjail [-s] <player>` | `xbans.unjail` |
 | `/report <player> <reason>` | `xbans.report` |
 | `/unreport <player> [id]` | `xbans.unreport` |
-| `/unban-all` | `xbans.unban-all` |
-| `/unmute-all` | `xbans.unmute-all` |
+| `/unban-all <player>` | `xbans.unban-all` |
+| `/unmute-all <player>` | `xbans.unmute-all` |
 
 ### Jail Management
 
@@ -105,7 +105,6 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `/jail-create <name>` | `xbans.jail.manage` |
 | `/jail-delete <name>` | `xbans.jail.manage` |
 | `/jail-locations` | `xbans.jail` |
-| `/jaillist` | `xbans.jail` |
 
 ### Moderation
 
@@ -116,19 +115,15 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `/note <add\|list\|delete> <player\|id> [note]` | `xbans.note` |
 | `/warden` | `xbans.warden` |
 
-### Information
+### Information & Lists
 
 | Command | Permission |
 |---------|-----------|
 | `/profil <player>` | `xbans.profil` |
+| `/history <player>` | `xbans.history` |
 | `/whois <player\|ip>` | `xbans.whois` |
-| `/banlist` | `xbans.banlist` |
-| `/baniplist` | `xbans.baniplist` |
-| `/mutelist` | `xbans.mutelist` |
-| `/muteiplist` | `xbans.muteiplist` |
-| `/warnlist` | `xbans.warnlist` |
-| `/reportlist` | `xbans.reportlist` |
 | `/players` | `xbans.players` |
+| `/sanctions <bans\|ipbans\|mutes\|ipmutes\|warns\|reports\|jails>` | `xbans.sanctions` |
 
 ### Admin
 
@@ -156,10 +151,10 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `xbans.watchlist` | Manage watchlist |
 | `xbans.note` | Manage staff notes |
 | `xbans.warden` | Receive warden notifications |
-| `xbans.banlist` / `xbans.mutelist` / `xbans.warnlist` / `xbans.reportlist` | View sanction GUIs |
-| `xbans.baniplist` / `xbans.muteiplist` | View IP sanction GUIs |
+| `xbans.sanctions` | Open sanction list GUIs (`/sanctions <subcommand>`) |
 | `xbans.players` | Browse players GUI |
 | `xbans.profil` | View player profile |
+| `xbans.history` | Text-based sanction history |
 | `xbans.whois` | Whois lookup |
 | `xbans.admin` | Admin commands (reload, stats, export, import) |
 | `xbans.unban-all` / `xbans.unmute-all` | Bulk removal |
