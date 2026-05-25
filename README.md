@@ -6,11 +6,14 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 
 ### Sanctions
 - **Ban** / **IP Ban** / **IP Range Ban** -- with optional duration, silent flag, server targeting, templates
+- **Offline ban** -- ban / mute / warn players who have **never connected**; XBans resolves the UUID they will have on join, so the sanction applies the moment they log in (no Essentials workaround needed)
 - **Mute** / **IP Mute** -- blocks chat and configurable commands (`/msg`, `/r`, `/tell`, `/w`, `/me`)
 - **Warn** -- with configurable expiration and auto-escalation at thresholds (mute / ban / jail)
 - **Kick** -- immediate expulsion with reason display
 - **Jail** -- teleport to a predefined jail location with configurable restrictions (movement radius, chat, commands, interact, PvP), supports `-server` for server-specific jails
 - **Report** -- with AI classification, chat evidence extraction, and GUI resolution workflow
+- **Punish menu** -- `/punish <player>` opens a one-click sanction GUI, fully configurable in `guis/punish.yml`
+- **Report reason picker** -- `/report <player>` (no reason) opens a configurable reason GUI (`guis/report.yml`)
 - **Templates** -- shortcuts for common sanctions (e.g. `/ban player @cheat`)
 - **Shadow ban** -- banned player can join but only sees their own messages
 
@@ -59,10 +62,12 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 - **Staff Notes** (`/note`) -- private notes on players, visible in profile GUI
 - **Warden** (`/warden`) -- real-time notification system for staff (sanctions, reports, AI alerts, alt detection)
 
-### GUIs (14 screens, fully YAML-configurable)
+### GUIs (16 screens, fully YAML-configurable)
 - **Ban/Mute/Warn/Report/Jail lists** -- paginated with left-click to remove, right-click for profile
 - **Players** -- browse all tracked players with sanction status indicators
 - **Profile** -- player head, all sanctions, alt accounts, notes, watchlist, 5 history sub-GUIs (ban, mute, warn, report, jail)
+- **Punish menu** -- one-click sanctions on a target (`guis/punish.yml`); each button runs a configurable command as the staff member
+- **Report reason picker** -- pick a reason to report a player (`guis/report.yml`); reuses the normal report flow
 - **Report resolution** -- left-click to resolve (trains AI), shift+left to dismiss, right-click for profile
 - **Duplicate accounts** -- players sharing IPs
 - **Notes** -- view and delete staff notes
@@ -93,8 +98,9 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `/kick [-s] <player> [reason] [-server <name>]` | `xbans.kick` |
 | `/jail [-s] <player> [jail] [time] [reason] [-server <name>]` | `xbans.jail` |
 | `/unjail [-s] <player>` | `xbans.unjail` |
-| `/report <player> <reason>` | `xbans.report` |
+| `/report <player> [reason]` -- with no reason, opens the reason GUI | `xbans.report` |
 | `/unreport <player> [id]` | `xbans.unreport` |
+| `/punish <player>` -- opens the one-click sanction GUI | `xbans.punish` |
 | `/unban-all <player>` | `xbans.unban-all` |
 | `/unmute-all <player>` | `xbans.unmute-all` |
 
@@ -147,6 +153,7 @@ Advanced sanctions, security, and AI-powered moderation addon for XCore.
 | `xbans.jail` / `xbans.unjail` | Jail/unjail players |
 | `xbans.jail.manage` | Create/delete jail locations |
 | `xbans.report` / `xbans.unreport` | Report/unreport |
+| `xbans.punish` | Open the punish menu (`/punish`) |
 | `xbans.freeze` | Freeze players |
 | `xbans.watchlist` | Manage watchlist |
 | `xbans.note` | Manage staff notes |

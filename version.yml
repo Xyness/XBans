@@ -1,9 +1,11 @@
 # Version
-version: 1.0.13
+version: 1.0.14
 
 # Update date
-date: 14/05/2026
+date: 25/05/2026
 
 # Update notes
 update-notes:
-- Moved to XCore 1.0.3
+- Ban/mute/warn players who have never connected (resolved on join)
+- New /punish menu: one-click sanctions, fully configurable in guis/punish.yml
+- /report with no reason opens a configurable reason picker (guis/report.yml)
